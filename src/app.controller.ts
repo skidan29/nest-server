@@ -9,9 +9,4 @@ export class AppController {
   getHello(): string {
     return '<h1>Nest API</h1>';
   }
-
-  @Get('/test')
-  getWorld(): string {
-    return JSON.stringify('test');
-  }
 }
