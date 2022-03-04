@@ -7,6 +7,10 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return '<h1>Hello</h1>';
+  }
+  @Get('/test')
+  getWorld(): string {
+    return JSON.stringify('test');
   }
 }
