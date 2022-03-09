@@ -1,4 +1,12 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Post, Req } from '@nestjs/common';
+import { PremisesService } from './premises.service';
 
-@Controller('premises')
-export class PremisesController {}
+@Controller('api')
+export class PremisesController {
+  constructor(private premisesService: PremisesService) {}
+
+  @Get('/premises')
+  getGarages() {
+    return this.premisesService.getPremises();
+  }
+}
