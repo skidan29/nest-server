@@ -1,8 +1,8 @@
 import { Controller, Get, Post, Req } from '@nestjs/common';
-import { GaragesService } from './garage.service';
+import { GaragesService } from './garages.service';
 
 @Controller('api')
-export class GarageController {
+export class GaragesController {
   constructor(private garagesService: GaragesService) {}
   @Get('/garages')
   getGarages() {
