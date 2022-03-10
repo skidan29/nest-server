@@ -6,7 +6,12 @@ export class PremisesController {
   constructor(private premisesService: PremisesService) {}
 
   @Get('/premises')
-  getGarages() {
+  getPremises() {
     return this.premisesService.getPremises();
+  }
+
+  @Post('/premises')
+  postPremises(@Req() req) {
+    this.premisesService.postPremises(req.body);
   }
 }
